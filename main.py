@@ -61,6 +61,8 @@ model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=
 # different metrics for different outputs of a multi-output model,
 # you could also pass a dictionary
 
+train_labels = np.reshape(train_labels, 6)
+
 # Feed the data to model
 model.fit(train_images, train_labels, epochs=5)
 
